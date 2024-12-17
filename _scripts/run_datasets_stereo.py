@@ -7,13 +7,13 @@ try:
 except ImportError:
     pass
 
-from auto_template.learner import TOL_RANK_ONE, TOL_REL_GAP
-from auto_template.real_experiments import (
+from constraint_learning.auto_template.learner import TOL_RANK_ONE, TOL_REL_GAP
+from constraint_learning.auto_template.real_experiments import (
     create_rmse_table,
     load_experiment,
     run_experiments,
 )
-from utils.plotting_real import (
+from constraint_learning.utils.plotting_real import (
     plot_ground_truth,
     plot_local_vs_global,
     plot_poses,

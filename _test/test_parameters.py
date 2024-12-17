@@ -1,8 +1,8 @@
 import matplotlib.pylab as plt
 import numpy as np
 
-from lifters.stereo1d_lifter import Stereo1DLifter
-from lifters.stereo2d_lifter import Stereo2DLifter
+from constraint_learning.lifters.stereo1d_lifter import Stereo1DLifter
+from constraint_learning.lifters.stereo2d_lifter import Stereo2DLifter
 from poly_matrix.poly_matrix import PolyMatrix
 
 

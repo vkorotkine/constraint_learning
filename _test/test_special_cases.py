@@ -4,10 +4,10 @@ TODO: SLAM is currently not supported and therefore these tests are not being ke
 
 import numpy as np
 
-from lifters.range_only_slam1 import RangeOnlySLAM1Lifter
-from lifters.range_only_slam2 import RangeOnlySLAM2Lifter
-from lifters.stereo2d_lifter import Stereo2DLifter
-from lifters.stereo3d_lifter import Stereo3DLifter
+from constraint_learning.lifters.range_only_slam1 import RangeOnlySLAM1Lifter
+from constraint_learning.lifters.range_only_slam2 import RangeOnlySLAM2Lifter
+from constraint_learning.lifters.stereo2d_lifter import Stereo2DLifter
+from constraint_learning.lifters.stereo3d_lifter import Stereo3DLifter
 
 d = 3
 n_landmarks = 5
@@ -48,7 +48,7 @@ def old_test_equivalent_lifters():
 
 
 def test_levels():
-    from lifters.stereo_lifter import StereoLifter
+    from constraint_learning.lifters.stereo_lifter import StereoLifter
 
     for level in StereoLifter.LEVELS:
         lifter_2d = Stereo2DLifter(n_landmarks=3, level=level)

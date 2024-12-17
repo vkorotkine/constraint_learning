@@ -2,9 +2,9 @@ from abc import ABC
 
 import autograd.numpy as np
 
-from lifters.state_lifter import StateLifter
+from constraint_learning.lifters.state_lifter import StateLifter
 from poly_matrix.poly_matrix import PolyMatrix
-from utils.geometry import (
+from constraint_learning.utils.geometry import (
     get_C_r_from_theta,
     get_noisy_pose,
     get_pose_errors_from_theta,
@@ -103,7 +103,7 @@ class StereoLifter(StateLifter, ABC):
         self.parameters = np.r_[1.0, self.landmarks.flatten()]
 
     def generate_random_theta(self):
-        from utils.geometry import generate_random_pose
+        from constraint_learning.utils.geometry import generate_random_pose
 
         return generate_random_pose(d=self.d)
 

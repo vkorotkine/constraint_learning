@@ -1,7 +1,7 @@
 import numpy as np
 import scipy.sparse as sp
 
-from lifters.state_lifter import StateLifter
+from constraint_learning.lifters.state_lifter import StateLifter
 from poly_matrix.poly_matrix import PolyMatrix
 
 

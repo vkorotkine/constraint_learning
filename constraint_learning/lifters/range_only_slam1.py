@@ -3,7 +3,7 @@ import itertools
 import matplotlib.pylab as plt
 import numpy as np
 
-from lifters.range_only_slam_lifters import RangeOnlyLifter
+from constraint_learning.lifters.range_only_slam_lifters import RangeOnlyLifter
 from poly_matrix.least_squares_problem import LeastSquaresProblem
 from poly_matrix.poly_matrix import PolyMatrix
 

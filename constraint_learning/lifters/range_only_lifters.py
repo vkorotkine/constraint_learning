@@ -3,7 +3,7 @@ import numpy as np
 import scipy.sparse as sp
 from scipy.optimize import minimize
 
-from lifters.state_lifter import StateLifter
+from constraint_learning.lifters.state_lifter import StateLifter
 from poly_matrix.least_squares_problem import LeastSquaresProblem
 
 plt.ion()

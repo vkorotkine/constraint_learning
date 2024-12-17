@@ -2,9 +2,9 @@ import pickle
 
 import autograd.numpy as np
 
-from lifters.stereo3d_problem import _cost, local_solver
-from lifters.stereo_lifter import NORMALIZE, StereoLifter
-from utils.geometry import get_T, get_theta_from_T
+from constraint_learning.lifters.stereo3d_problem import _cost, local_solver
+from constraint_learning.lifters.stereo_lifter import NORMALIZE, StereoLifter
+from constraint_learning.utils.geometry import get_T, get_theta_from_T
 
 
 def change_dimensions(a, y):

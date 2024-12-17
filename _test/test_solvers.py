@@ -1,8 +1,9 @@
 import numpy as np
-# from lifters.matweight_lifter import MatWeightLifter
-from lifters.mono_lifter import MonoLifter
-from lifters.poly_lifters import PolyLifter
-from lifters.robust_pose_lifter import RobustPoseLifter
+
+# from constraint_learning.lifters.matweight_lifter import MatWeightLifter
+from constraint_learning.lifters.mono_lifter import MonoLifter
+from constraint_learning.lifters.poly_lifters import PolyLifter
+from constraint_learning.lifters.robust_pose_lifter import RobustPoseLifter
 from utils.test_tools import all_lifters
 
 NOISE = 1e-2

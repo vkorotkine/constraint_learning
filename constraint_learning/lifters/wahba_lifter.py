@@ -2,8 +2,8 @@ import autograd.numpy as np
 import matplotlib
 import matplotlib.pylab as plt
 
-from lifters.robust_pose_lifter import RobustPoseLifter
-from utils.geometry import get_C_r_from_theta
+from constraint_learning.lifters.robust_pose_lifter import RobustPoseLifter
+from constraint_learning.utils.geometry import get_C_r_from_theta
 
 N_TRYS = 10
 NOISE = 1e-2  # inlier noise

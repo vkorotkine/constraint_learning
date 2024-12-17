@@ -1,5 +1,5 @@
 from abc import ABC, abstractmethod, abstractproperty
-
+from typing import Union, List, Dict
 import numpy as np
 
 
@@ -65,7 +65,7 @@ class BaseClass(ABC):
         return
 
     @abstractmethod
-    def sample_theta(self) -> dict | np.ndarray:
+    def sample_theta(self) -> Union[Dict, np.ndarray]:
         return
 
     @abstractmethod

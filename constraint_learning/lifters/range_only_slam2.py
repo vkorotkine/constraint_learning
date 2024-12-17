@@ -1,6 +1,6 @@
 import numpy as np
 
-from lifters.range_only_slam1 import RangeOnlySLAM1Lifter
+from constraint_learning.lifters.range_only_slam1 import RangeOnlySLAM1Lifter
 from poly_matrix.least_squares_problem import LeastSquaresProblem
 
 

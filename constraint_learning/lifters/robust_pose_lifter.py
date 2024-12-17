@@ -6,9 +6,13 @@ import matplotlib
 import matplotlib.pylab as plt
 from scipy.spatial.transform import Rotation as R
 
-from lifters.state_lifter import StateLifter
+from constraint_learning.lifters.state_lifter import StateLifter
 from poly_matrix.poly_matrix import PolyMatrix
-from utils.geometry import get_C_r_from_theta, get_noisy_pose, get_theta_from_C_r
+from constraint_learning.utils.geometry import (
+    get_C_r_from_theta,
+    get_noisy_pose,
+    get_theta_from_C_r,
+)
 
 N_TRYS = 10
 
@@ -217,7 +221,7 @@ class RobustPoseLifter(StateLifter, ABC):
         return theta_x
 
     def get_error(self, theta_hat):
-        from utils.geometry import get_pose_errors_from_theta
+        from constraint_learning.utils.geometry import get_pose_errors_from_theta
 
         theta_hat_pose = theta_hat[: self.d + self.d**2]
         theta_gt_pose = self.theta[: self.d + self.d**2]

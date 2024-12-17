@@ -10,12 +10,12 @@ from cert_tools.sdp_solvers import solve_feasibility_sdp
 from cert_tools.sdp_solvers import solve_lambda_cvxpy as solve_lambda
 from cert_tools.sdp_solvers import solve_sdp_cvxpy
 
-from lifters.state_lifter import StateLifter
+from constraint_learning.lifters.state_lifter import StateLifter
 from poly_matrix.poly_matrix import PolyMatrix
-from solvers.common import find_local_minimum
-from solvers.sparse import bisection, brute_force
-from utils.constraint import Constraint
-from utils.plotting_tools import (
+from constraint_learning.solvers.common import find_local_minimum
+from constraint_learning.solvers.sparse import bisection, brute_force
+from constraint_learning.utils.constraint import Constraint
+from constraint_learning.utils.plotting_tools import (
     add_colorbar,
     add_rectangles,
     import_plt,
@@ -927,7 +927,7 @@ class Learner(object):
     def save_sorted_templates(
         self, df, fname_root="", title="", drop_zero=False, simplify=True
     ):
-        from utils.plotting_tools import plot_basis
+        from constraint_learning.utils.plotting_tools import plot_basis
 
         # convert to poly matrix for plotting purposes only.
         poly_matrix = PolyMatrix(symmetric=False)
@@ -1002,7 +1002,7 @@ class Learner(object):
         return fig, ax
 
     def save_templates(self, fname_root="", title="", with_parameters=False):
-        from utils.plotting_tools import plot_basis
+        from constraint_learning.utils.plotting_tools import plot_basis
 
         templates_poly = self.generate_templates_poly(
             factor_out_parameters=not with_parameters
@@ -1070,7 +1070,7 @@ class Learner(object):
         for ax in axs:
             add_rectangles(ax, self.lifter.var_dict)
 
-        from utils.plotting_tools import add_colorbar
+        from constraint_learning.utils.plotting_tools import add_colorbar
 
         add_colorbar(fig, axs[1], im1, nticks=3)
         # only for dimensions
@@ -1102,7 +1102,9 @@ class Learner(object):
                 sorted_i = sorted(A_poly.variable_dict_i.keys())
             else:
                 sorted_i = self.lifter.var_dict_unroll
-            from utils.plotting_tools import initialize_discrete_cbar
+            from constraint_learning.utils.plotting_tools import (
+                initialize_discrete_cbar,
+            )
 
             plot_axs = []
             if i < n_matrices:

@@ -3,7 +3,7 @@ from abc import abstractmethod
 
 import numpy as np
 
-from lifters.state_lifter import StateLifter
+from constraint_learning.lifters.state_lifter import StateLifter
 
 # How to deal with Gauge freedom.
 # - None: do not remove it

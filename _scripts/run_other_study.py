@@ -1,13 +1,13 @@
 import numpy as np
 
-from auto_template.learner import Learner
-from auto_template.sim_experiments import (
+from constraint_learning.auto_template.learner import Learner
+from constraint_learning.auto_template.sim_experiments import (
     apply_autotemplate_base,
     apply_autotight_base,
     plot_autotemplate_time,
 )
-from lifters.mono_lifter import MonoLifter
-from utils.plotting_tools import add_lines, savefig
+from constraint_learning.lifters.mono_lifter import MonoLifter
+from constraint_learning.utils.plotting_tools import add_lines, savefig
 
 RESULTS_DIR = "_results_server_v3"
 
@@ -119,7 +119,7 @@ def run_wahba(
     results_dir=RESULTS_DIR,
     debug=debug,
 ):
-    from lifters.wahba_lifter import WahbaLifter
+    from constraint_learning.lifters.wahba_lifter import WahbaLifter
 
     d = 3
     n_outliers = 1
@@ -164,7 +164,7 @@ def run_mono(
     results_dir=RESULTS_DIR,
     debug=debug,
 ):
-    from lifters.mono_lifter import MonoLifter
+    from constraint_learning.lifters.mono_lifter import MonoLifter
 
     d = 3
     n_outliers = 1

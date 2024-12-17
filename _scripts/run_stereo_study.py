@@ -1,17 +1,17 @@
 import matplotlib.pylab as plt
 import numpy as np
 
-from auto_template.learner import Learner
-from auto_template.sim_experiments import (
+from constraint_learning.auto_template.learner import Learner
+from constraint_learning.auto_template.sim_experiments import (
     apply_autotemplate_base,
     apply_autotemplate_plot,
     apply_autotight_base,
     plot_autotemplate_time,
 )
-from lifters.stereo1d_lifter import Stereo1DLifter
-from lifters.stereo2d_lifter import Stereo2DLifter
-from lifters.stereo3d_lifter import Stereo3DLifter
-from utils.plotting_tools import add_lines, plot_matrix, savefig
+from constraint_learning.lifters.stereo1d_lifter import Stereo1DLifter
+from constraint_learning.lifters.stereo2d_lifter import Stereo2DLifter
+from constraint_learning.lifters.stereo3d_lifter import Stereo3DLifter
+from constraint_learning.utils.plotting_tools import add_lines, plot_matrix, savefig
 
 RESULTS_DIR = "_results_v4"
 debug = False

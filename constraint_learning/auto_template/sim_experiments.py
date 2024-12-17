@@ -6,13 +6,13 @@ import matplotlib.pylab as plt
 import numpy as np
 import pandas as pd
 
-from auto_template.learner import Learner
-from lifters.mono_lifter import MonoLifter
-from lifters.range_only_lifters import RangeOnlyLocLifter
-from lifters.stereo2d_lifter import Stereo2DLifter
-from lifters.stereo3d_lifter import Stereo3DLifter
-from lifters.wahba_lifter import WahbaLifter
-from utils.plotting_tools import FIGSIZE, savefig
+from constraint_learning.auto_template.learner import Learner
+from constraint_learning.lifters.mono_lifter import MonoLifter
+from constraint_learning.lifters.range_only_lifters import RangeOnlyLocLifter
+from constraint_learning.lifters.stereo2d_lifter import Stereo2DLifter
+from constraint_learning.lifters.stereo3d_lifter import Stereo3DLifter
+from constraint_learning.lifters.wahba_lifter import WahbaLifter
+from constraint_learning.utils.plotting_tools import FIGSIZE, savefig
 
 COMPUTE_ONESHOT = True
 PLOT_DICT = {

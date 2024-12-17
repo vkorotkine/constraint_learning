@@ -1,7 +1,10 @@
 import numpy as np
 import pytest
 
-from lifters.state_lifter import ravel_multi_index_triu, unravel_multi_index_triu
+from constraint_learning.lifters.state_lifter import (
+    ravel_multi_index_triu,
+    unravel_multi_index_triu,
+)
 from utils.test_tools import all_lifters
 
 

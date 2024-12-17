@@ -2,8 +2,8 @@ import cvxpy as cp
 import matplotlib.pylab as plt
 import numpy as np
 
-from lifters.range_only_lifters import RangeOnlyLocLifter
-from lifters.state_lifter import StateLifter
+from constraint_learning.lifters.range_only_lifters import RangeOnlyLocLifter
+from constraint_learning.lifters.state_lifter import StateLifter
 
 
 def find_local_minimum(
@@ -64,7 +64,7 @@ def find_local_minimum(
 
         # if (info["n local"] or info["n fail"]) and fname_root != "":
         if plot:
-            from utils.plotting_tools import plot_frame
+            from constraint_learning.utils.plotting_tools import plot_frame
 
             fig, ax = plt.subplots()
 
