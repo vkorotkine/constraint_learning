@@ -1,16 +1,17 @@
 import pickle
 import time
-
 import numpy as np
 import pandas as pd
 
-from auto_template.learner import Learner
-from auto_template.sim_experiments import save_autotight_order
-from lifters.mono_lifter import MonoLifter
-from lifters.range_only_lifters import RangeOnlyLocLifter
-from lifters.stereo2d_lifter import Stereo2DLifter
-from lifters.stereo3d_lifter import Stereo3DLifter
-from lifters.wahba_lifter import WahbaLifter
+import constraint_learning.auto_template as auto_template
+
+from constraint_learning.auto_template.learner import Learner
+from constraint_learning.auto_template.sim_experiments import save_autotight_order
+from constraint_learning.lifters.mono_lifter import MonoLifter
+from constraint_learning.lifters.range_only_lifters import RangeOnlyLocLifter
+from constraint_learning.lifters.stereo2d_lifter import Stereo2DLifter
+from constraint_learning.lifters.stereo3d_lifter import Stereo3DLifter
+from constraint_learning.lifters.wahba_lifter import WahbaLifter
 
 RECOMPUTE = True
 
